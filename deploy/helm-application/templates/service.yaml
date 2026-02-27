@@ -15,6 +15,7 @@ spec:
   - port: {{ .Values.service.port }}
     targetPort: {{ .Values.service.targetPort }}
     protocol: TCP
+    appProtocol: http
     name: http
   selector:
     {{- include "cls-backend-application.selectorLabels" . | nindent 4 }}
